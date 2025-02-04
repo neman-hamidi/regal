@@ -10,6 +10,16 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        praimary: "#B19276",
+        secondary : "#3C3D45",
+        mainGray : "#F2F2F3",
+      },
+      fontFamily: {
+        "yekan-SemiBold": "yekan-SemiBold",
+        "yekan-Regular": "yekan-Regular",
+      },
+      spacing: {
+        "9/10": "90%",
       },
     },
   },
