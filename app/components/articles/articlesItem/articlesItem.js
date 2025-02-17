@@ -13,7 +13,7 @@ export default function articlesItem({ img, title, desc, date, time, texts }) {
         />
       </div>
       <div>
-        <p className="font-bold mt-3 mb-1 text-sm">{title}</p>
+        <h3 className="font-bold mt-3 mb-1 text-sm">{title}</h3>
         <p className="text-secondary text-xs mb-1 leading-5">{desc}</p>
         <p className="text-gray-400 mb-2 mt-1 text-xs">
           {date} | {time} دقیقه

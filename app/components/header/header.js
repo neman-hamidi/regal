@@ -4,13 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import Image from "next/image";
 import "swiper/css";
+import { Texts, imgs } from "./Text";
 import "./header.css";
-
 export default function header() {
   return (
     <header>
       <div className=" px-8 mt-8 lg:flex items-start justify-center gap-10">
-        <div  className="hidden lg:block">
+        <div className="hidden lg:block">
           <Image
             src="/images/image-22.png"
             width="480"
@@ -34,24 +34,14 @@ export default function header() {
               grabCursor={true}
               className="mySwiper"
             >
-              <SwiperSlide className="text-sm py-0.5 px-2 w-fit-slide rounded-3xl text-gray-700 bg-gray-100 border border-gray-200">
-                کالکشن های متنوع
-              </SwiperSlide>
-              <SwiperSlide className="text-sm py-0.5 px-2 w-fit-slide rounded-3xl text-gray-700 bg-gray-100 border border-gray-200">
-                مد و فشن
-              </SwiperSlide>
-              <SwiperSlide className="text-sm py-0.5 px-2 w-fit-slide rounded-3xl text-gray-700 bg-gray-100 border border-gray-200">
-                استایل های خاص
-              </SwiperSlide>
-              <SwiperSlide className="text-sm py-0.5 px-2 w-fit-slide rounded-3xl text-gray-700 bg-gray-100 border border-gray-200">
-                رنگ بندی های متنوع
-              </SwiperSlide>
-              <SwiperSlide className="text-sm py-0.5 px-2 w-fit-slide rounded-3xl text-gray-700 bg-gray-100 border border-gray-200">
-                طرح روز
-              </SwiperSlide>
-              <SwiperSlide className="text-sm py-0.5 px-2 w-fit-slide rounded-3xl text-gray-700 bg-gray-100 border border-gray-200">
-                دسته بندی های متفاوت
-              </SwiperSlide>
+              {Texts.map((item, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="text-sm py-0.5 px-2 w-fit-slide rounded-3xl text-gray-700 bg-gray-100 border border-gray-200"
+                >
+                  {item.title}
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
           <div className="flex items-center justify-between gap-6 w-fit">
@@ -64,23 +54,17 @@ export default function header() {
             <Image src="/images/Arrow.png" height="25" width="59" alt="arrow" />
           </div>
           <div className="mt-8 ">
-          <Swiper
+            <Swiper
               slidesPerView={3}
               spaceBetween={20}
               grabCursor={true}
               className="mySwiper"
             >
-              <SwiperSlide className="w-fit-slide">
-                 <Image src="/images/image.png" width="254" height="312" alt="images" />
-              </SwiperSlide>
-              <SwiperSlide className="w-fit-slide">
-                 <Image src="/images/image-20.png" width="254" height="312" alt="images" />
-              </SwiperSlide>
-              
-              <SwiperSlide className="w-fit-slide">
-                <Image src="/images/image-14.png" width="254" height="312" alt="images" />
-              </SwiperSlide>
-              
+              {imgs.map((item, index) => (
+                <SwiperSlide key={index} className="w-fit-slide">
+                  <Image src={item.src} width="254" height="312" alt="images" />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>

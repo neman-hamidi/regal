@@ -4,7 +4,7 @@ import { GiDrippingStar } from "react-icons/gi";
 
 export default function commentsItem({ name, city, img, desc, title, count }) {
   return (
-    <div>
+    <>
       <div className="flex items-center gap-2 mb-4">
         <div>
           <Image src={img} width="48" height="48" alt="profile-user-comments" />
@@ -25,6 +25,6 @@ export default function commentsItem({ name, city, img, desc, title, count }) {
           </span>
         ))}
       </div>
-    </div>
+    </>
   );
 }

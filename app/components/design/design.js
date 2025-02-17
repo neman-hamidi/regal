@@ -3,7 +3,7 @@ import { PiScissors } from "react-icons/pi";
 import Image from "next/image";
 export default function design() {
   return (
-    <div className="bg-zinc-50 mt-16 py-16">
+    <section className="bg-zinc-50 mt-16 py-16">
       <div className="text-center pt-8 w-4/6 mx-auto">
         <p className="text-xl lg:text-4xl">
           <span className="text-praimary">طراحـــی</span> و دوخت بر اساس شکل بدن
@@ -29,7 +29,7 @@ export default function design() {
             <div><Image src="/images/image (1).png"  width="167" height="240" alt="img" /></div>
             <div><Image src="/images/image (2).png"  width="115" height="160" alt="img" /></div>
         </div>
-        <div>
+      <div>
         <div className="lg:flex hidden items-center gap-3">
             <div><Image src="/images/image (4).png"  width="300" height="244" alt="img" /></div>
             <div><Image src="/images/image (1-1).png"  width="250" height="348" alt="img" /></div>
@@ -37,7 +37,7 @@ export default function design() {
             <div><Image src="/images/image (2-1).png"  width="250" height="348" alt="img" /></div>
             <div><Image src="/images/image (3).png"  width="300" height="244" alt="img" /></div>
         </div>
-        </div>
-    </div>
+      </div>
+    </section>
   );
 }
